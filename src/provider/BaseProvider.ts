@@ -67,7 +67,7 @@ class BaseProvider {
     protected addEmbed(embed: Embed): void {
         // TODO check to see if too many fields
         // add the footer to all embeds added
-        embed.footer = new EmbedFooter('Powered by Darth & Repooc')
+        embed.footer = new EmbedFooter('Powered by Vodka')
         if (this.embedColor != null) {
             embed.color = this.embedColor
         }
