@@ -141,6 +141,9 @@ app.post('/api/webhooks/:webhookID/:webhookSecret/:from', async (req, res) => {
             data: jsonString,
             method: 'post',
             url: discordEndpoint
+            headers: {
+                'Content-Type': 'application/json'
+            }
         }).then(() => {
             res.sendStatus(200)
         }).catch((err: any) => {
