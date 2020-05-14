@@ -1,6 +1,6 @@
 import { expect } from 'chai'
-import { Jira } from '../src/provider/Jira'
-import { Tester } from './Tester'
+import { Jira } from '../../src/provider/Jira'
+import { Tester } from '../Tester'
 
 describe('/POST jira', () => {
     it('issue_updated', async () => {
@@ -13,6 +13,12 @@ describe('/POST jira', () => {
         const res = await Tester.test(new Jira(), 'jira-comment.json', null)
         expect(res).to.not.be.an('error')
         expect(res).to.not.be.a('DiscordPayload')
+    })
+
+    it('custom_no_event', async () => {
+        const res = await Tester.test(new Jira(), 'jira-custom-no-event.json', null)
+        expect(res).to.not.be.an('error')
+        expect(res).to.be.a('null')
     })
 
 

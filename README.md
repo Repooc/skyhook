@@ -22,6 +22,7 @@ https://skyhook.glitch.me/api/webhooks/firstPartOfWebhook/secondPartOfWebhook/pr
 - [AppVeyor](https://www.appveyor.com/docs/notifications/#webhook-payload-default) - `/appveyor`
 - [Bintray](https://bintray.com/docs/api/#_webhooks) - `/bintray`
 - [BitBucket](https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html) - `/bitbucket`
+- [BitBucket Server](https://confluence.atlassian.com/bitbucketserver/event-payload-938025882.html) - `/bitbucketserver`
 - [circleci](https://circleci.com/docs/1.0/configuration/#notify) - `/circleci`
 - [Codacy](https://support.codacy.com/hc/en-us/articles/207280359-WebHook-Notifications) - `/codacy`
 - [Dockerhub](https://docs.docker.com/docker-hub/webhooks) - `/dockerhub`
@@ -41,8 +42,10 @@ https://skyhook.glitch.me/api/webhooks/firstPartOfWebhook/secondPartOfWebhook/pr
 If you want support for a new provider, just create a pull request and add it!  
 Alternatively, a new provider can also be requested by creating an [issue](https://github.com/Commit451/skyhook/issues).
 
-## Contributing
+## Outage
+If the service is down, please check https://status.glitch.com/ before creating an issue.
 
+## Contributing
 If you wish to contribute, follow our [contributing guide](CONTRIBUTING.md).
 
 ### Creating a Provider
@@ -77,7 +80,6 @@ docker rm skyhook
 ```
 
 ## License
-
 skyhook is available under the MIT license. See the LICENSE file for more info.
 
 \ ゜o゜)ノ

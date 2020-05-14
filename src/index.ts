@@ -11,6 +11,7 @@ import { LoggerUtil } from './util/LoggerUtil'
 import { AppVeyor } from './provider/Appveyor'
 import { Bintray } from './provider/Bintray'
 import { BitBucket } from './provider/Bitbucket'
+import { BitBucketServer } from './provider/BitBucketServer'
 import { CircleCi } from './provider/CircleCi'
 import { Codacy } from './provider/Codacy'
 import { DockerHub } from './provider/DockerHub'
@@ -41,6 +42,7 @@ const providers: any[] = [
     AppVeyor,
     Bintray,
     BitBucket,
+    BitBucketServer,
     CircleCi,
     Codacy,
     DockerHub,
