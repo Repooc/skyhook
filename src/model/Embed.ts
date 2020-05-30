@@ -2,6 +2,7 @@ import { EmbedAuthor } from './EmbedAuthor'
 import { EmbedField } from './EmbedField'
 import { EmbedFooter } from './EmbedFooter'
 import { EmbedImage } from './EmbedImage'
+import { EmbedThumbnail } from './EmbedThumbnail'
 
 /**
  * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-structure
@@ -17,6 +18,7 @@ class Embed {
     public fields: EmbedField[]
     public author: EmbedAuthor
     public image: EmbedImage
+    public thumbnail: EmbedThumbnail
 }
 
 export { Embed }

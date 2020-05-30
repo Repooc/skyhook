@@ -2,6 +2,7 @@ import { Embed } from '../model/Embed'
 import { EmbedAuthor } from '../model/EmbedAuthor'
 import { EmbedField } from '../model/EmbedField'
 import { BaseProvider } from '../provider/BaseProvider'
+import { EmbedThumbnail } from '../model/EmbedThumbnail'
 
 class Project {
     public name?: string
@@ -61,6 +62,7 @@ class GitLab extends BaseProvider {
             this.embed.title = '[' + project.name + ':' + project.branch + '] ' + project.totalCommitsCount + ' commit' + ((project.totalCommitsCount > 1) ? 's' : '')
             this.embed.url = project.url + '/tree/' + project.branch
             this.embed.description = 'Project Avatar URL: ' + this.body.project.avatar_url + '  user_avatar: ' + this.body.user_avatar
+            this.embed.thumbnail = this.thumbnailFromBodyPush()
             this.embed.fields = fields
         } else {
             if (this.body.after !== '0000000000000000000000000000000000000000') {
@@ -200,6 +202,13 @@ class GitLab extends BaseProvider {
         author.name = this.body.user_name
         author.iconUrl = GitLab._formatAvatarURL(this.body.user_avatar)
         return author
+    }
+
+    private thumbnailFromBodyPush(): EmbedThumbnail {
+        const thumb = new EmbedThumbnail()
+        thumb.url = this.body.project.web_url
+        thumb.iconUrl = this.body.project.avatar_url
+        return thumb
     }
 
     private projectFromBody(): Project {
