@@ -61,7 +61,6 @@ class GitLab extends BaseProvider {
 
             this.embed.title = '[' + project.name + ':' + project.branch + '] ' + project.totalCommitsCount + ' commit' + ((project.totalCommitsCount > 1) ? 's' : '')
             this.embed.url = project.url + '/tree/' + project.branch
-            this.embed.description = this.body.project.description
             this.embed.thumbnail = this.thumbnailFromBodyPush()
             this.embed.fields = fields
         } else {
@@ -207,8 +206,6 @@ class GitLab extends BaseProvider {
     private thumbnailFromBodyPush(): EmbedThumbnail {
         const thumb = new EmbedThumbnail()
         thumb.url = this.body.project.avatar_url
-        // thumb.iconUrl = 'https://git.tukui.org/uploads/-/system/project/avatar/45/SLE_New_Logo.png'
-        // thumb.iconUrl = GitLab._formatAvatarURL(this.body.project.avatar_url)
         return thumb
     }
 
