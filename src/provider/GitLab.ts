@@ -61,7 +61,7 @@ class GitLab extends BaseProvider {
 
             this.embed.title = '[' + project.name + ':' + project.branch + '] ' + project.totalCommitsCount + ' commit' + ((project.totalCommitsCount > 1) ? 's' : '')
             this.embed.url = project.url + '/tree/' + project.branch
-            this.embed.description = 'Project Avatar URL: ' + this.body.project.avatar_url + '  user_avatar: ' + this.body.user_avatar
+            this.embed.description = this.body.project.description
             this.embed.thumbnail = this.thumbnailFromBodyPush()
             this.embed.fields = fields
         } else {
