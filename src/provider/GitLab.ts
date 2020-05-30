@@ -207,7 +207,7 @@ class GitLab extends BaseProvider {
     private thumbnailFromBodyPush(): EmbedThumbnail {
         const thumb = new EmbedThumbnail()
         thumb.url = this.body.project.web_url
-        thumb.iconUrl = this.body.project.avatar_url
+        thumb.iconUrl = GitLab._formatAvatarURL(this.body.project.avatar_url)
         return thumb
     }
 
