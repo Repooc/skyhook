@@ -91,7 +91,7 @@ abstract class BaseProvider {
         // TODO check to see if too many fields
         // add the footer to all embeds added
         embed.footer = new EmbedFooter('Powered by Vodka')
-        embed.footer.icon_url = `https://img.repooc.org/f4eba/jILEZEHO67.png/raw`
+        embed.footer.icon_url = `https://img.repooc.org/f4eba/bamUxIHe89.png/raw`
 
         if (this.embedColor != null) {
             embed.color = this.embedColor
